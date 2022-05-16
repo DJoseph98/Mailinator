@@ -1,5 +1,4 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
-import { IsEmail } from "class-validator";
 import { Message } from "./message.entity";
 
 @Entity()
@@ -8,7 +7,18 @@ export class Mailbox {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  @IsEmail()
+  @Column({ unique: true })
   email: string;
+
+  @Column({
+    type: "datetime",
+    default: () => "NOW()",
+  })
+  created_at: Date;
+
+  @Column({
+    type: "datetime",
+    default: () => "NOW()",
+  })
+  updated_at: Date;
 }

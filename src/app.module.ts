@@ -3,6 +3,8 @@ import { MailboxModule } from "./mailbox/mailbox.module";
 import { MessageModule } from "./message/message.module";
 import { RouterModule } from "@nestjs/core";
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { Mailbox } from "./entity/mailbox.entity";
+import { Message } from "./entity/message.entity";
 
 @Module({
   imports: [
@@ -13,7 +15,8 @@ import { TypeOrmModule } from "@nestjs/typeorm";
       username: "dbuser",
       password: "dbuserpwd",
       database: "database_development",
-      entities: [],
+      entities: [Mailbox, Message],
+      migrations: [],
       synchronize: true,
     }),
     MailboxModule,

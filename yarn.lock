@@ -4609,7 +4609,7 @@ ts-loader@^9.2.3:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-ts-node@^10.0.0:
+ts-node@^10.7.0:
   version "10.7.0"
   resolved "https://artifactory6.grabcad.net:443/artifactory/api/npm/npm-repo/ts-node/-/ts-node-10.7.0.tgz#35d503d0fab3e2baa672a0e94f4b40653c2463f5"
   integrity sha1-NdUD0Pqz4rqmcqDpT0tAZTwkY/U=
